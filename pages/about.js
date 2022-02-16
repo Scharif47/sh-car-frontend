@@ -1,4 +1,6 @@
+
 function AboutPage() {
+
   return (
     <div>
       <h1>SH Car</h1>
