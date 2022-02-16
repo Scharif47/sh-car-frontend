@@ -48,25 +48,6 @@ function Footer() {
 
   const screenSize = useWindowSize();
   const currentYear = new Date().getFullYear();
-
-  const renderArrowAdvice = adviceState ? (
-    <FaArrowAltCircleUp />
-  ) : (
-    <FaArrowAltCircleDown />
-  );
-
-  const renderArrowServices = servicesState ? (
-    <FaArrowAltCircleUp />
-  ) : (
-    <FaArrowAltCircleDown />
-  );
-
-  const renderArrowAbout = aboutState ? (
-    <FaArrowAltCircleUp />
-  ) : (
-    <FaArrowAltCircleDown />
-  );
-
   const isSmallScreen = screenSize.width < 1024;
 
   return (
@@ -76,12 +57,18 @@ function Footer() {
         <div className={`${styles.advice} ${styles.intro}`}>
           <div
             onClick={() => isSmallScreen && setAdviceState(!adviceState)}
-            className={`${styles.dropdown} ${styles.hello}`}
+            className={`${styles.dropdown}`}
           >
             <p className={styles.title}>Beratung</p>
-            <span className={styles.arrow}>{renderArrowAdvice}</span>
+            <span
+              className={`${styles.arrow} ${
+                adviceState ? styles.arrow_active : ""
+              }`}
+            >
+              <FaArrowAltCircleDown />
+            </span>
           </div>
-          <ul className={`${adviceState ? styles.list_active : styles.list}`}>
+          <ul className={`${styles.list} ${adviceState ? styles.active : ""}`}>
             <li>Kaufberatung</li>
             <li>Probefahrt buchen</li>
           </ul>
@@ -92,9 +79,17 @@ function Footer() {
             className={styles.dropdown}
           >
             <p className={styles.title}>Services</p>
-            <span className={styles.arrow}>{renderArrowServices}</span>
+            <span
+              className={`${styles.arrow} ${
+                servicesState ? styles.arrow_active : ""
+              }`}
+            >
+              <FaArrowAltCircleDown />
+            </span>
           </div>
-          <ul className={`${servicesState ? styles.list_active : styles.list}`}>
+          <ul
+            className={`${styles.list} ${servicesState ? styles.active : ""}`}
+          >
             <li>Service Termin vereinbaren</li>
             <li>Technischer Support</li>
           </ul>
@@ -105,9 +100,15 @@ function Footer() {
             className={styles.dropdown}
           >
             <p className={styles.title}>Über uns</p>
-            <span className={styles.arrow}>{renderArrowAbout}</span>
+            <span
+              className={`${styles.arrow} ${
+                aboutState ? styles.arrow_active : ""
+              }`}
+            >
+              <FaArrowAltCircleDown />
+            </span>
           </div>
-          <ul className={`${aboutState ? styles.list_active : styles.list}`}>
+          <ul className={`${styles.list} ${aboutState ? styles.active : ""}`}>
             <li>Geschichte</li>
             <li>Kontakt</li>
             <li>Impressum</li>
