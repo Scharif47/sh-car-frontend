@@ -1,0 +1,28 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 8rem;
+  padding: 2rem;
+  background-color: black;
+  color: white;
+}
+
+.header__content {
+  display: flex;
+}
+
+
+
+.headerIcon {
+  font-size: 3.5rem;
+  padding: 1rem;
+}
+
+.headerIcon:hover {
+  background-color: rgba(49, 48, 48, 0.74);
+}
+
+.burger_menu {
+  cursor: pointer;
+}

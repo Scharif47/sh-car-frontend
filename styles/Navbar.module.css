@@ -6,6 +6,7 @@
   height: 100vh;
   transition: all 0.3s ease-in-out;
   z-index: 10;
+  padding: 5rem;
 }
 
 .active {
@@ -15,6 +16,14 @@
 .nav__content {
   display: flex;
   flex-direction: column;
-  margin-top: 10rem;
-  margin-left: 10rem;
+  margin-top: 5rem;
+}
+
+.burger_div {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+@media (min-width: 760px) {
+
 }

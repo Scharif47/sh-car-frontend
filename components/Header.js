@@ -1,41 +1,52 @@
 import React, { useState } from "react";
+import styles from "../styles/Header.module.css";
 import Link from "next/link";
-import { MenuIcon, XIcon } from "@heroicons/react/outline";
 import Navbar from "./Navbar";
+import { IoCarSport } from "react-icons/io5";
+import { BsPersonFill } from "react-icons/bs";
+import { AiFillStar } from "react-icons/ai";
+import { GiHamburgerMenu } from "react-icons/gi";
+
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   const BurgerMenuHandler = () => setIsOpen(!isOpen);
 
-  const renderIcon = isOpen ? (
-    <XIcon className="h-10 w-10 " />
-  ) : (
-    <MenuIcon className="h-10 w-10 " />
-  );
+  // const renderIcon = isOpen ? (
+  //   <IoClose className={`${styles.headerIcon} ${styles.burger_closeIcon}`} />
+  // ) : (
+  //   <GiHamburgerMenu className={styles.headerIcon} />
+  // );
 
   return (
-    <header className="h-20">
-      <div className=" absolute top-0 flex w-full justify-between align-middle p-0.5">
-        <div
-          className=" border-2 cursor-pointer z-50"
-          onClick={BurgerMenuHandler}
-        >
-          {renderIcon}
+    <header className={styles.header}>
+      <div className={`${styles.header__left} ${styles.header__content}`}>
+        <div className={styles.burger_menu} onClick={BurgerMenuHandler}>
+        <GiHamburgerMenu className={`${styles.headerIcon} ${styles.burger_headerIcon}`} />
         </div>
         <Link href="/">
           <a>
-            <p className="">Start</p>
+            <IoCarSport className={styles.headerIcon} />
+          </a>
+        </Link>
+      </div>
+
+      <Link href="/">
+        <a>
+          <p className="">SH CAR</p>
+        </a>
+      </Link>
+
+      <div className={`${styles.header__right} ${styles.header__content}`}>
+        <Link href="/">
+          <a>
+            <AiFillStar className={styles.headerIcon} />
           </a>
         </Link>
         <Link href="/">
           <a>
-            <p className="">Fahrzeuge</p>
-          </a>
-        </Link>
-        <Link href="/">
-          <a>
-            <p className="">SH CAR</p>
+            <BsPersonFill className={styles.headerIcon} />
           </a>
         </Link>
       </div>

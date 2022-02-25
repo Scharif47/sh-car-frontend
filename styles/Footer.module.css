@@ -19,8 +19,6 @@
   margin-bottom: 1rem;
 }
 
-.advice {
-}
 
 .dropdown {
   display: flex;
@@ -29,8 +27,7 @@
   font-size: 1.2rem;
 }
 
-.title {
-}
+
 
 .arrow {
   padding: 1rem;
@@ -51,15 +48,9 @@
   height: 80px;
 }
 
-.services {
-}
-
-.about {
-}
 
 /* Social Medias */
-.bottom {
-}
+
 
 .socials {
   display: flex;
@@ -91,8 +82,7 @@
   margin-bottom: 1rem;
 }
 
-.copyright {
-}
+
 
 @media (min-width: 1024px) {
   .top {

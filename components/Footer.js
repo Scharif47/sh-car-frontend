@@ -6,7 +6,6 @@ import {
   FaFacebook,
   FaInstagram,
   FaArrowAltCircleDown,
-  FaArrowAltCircleUp,
 } from "react-icons/fa";
 
 function Footer() {
