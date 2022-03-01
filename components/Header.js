@@ -10,13 +10,9 @@ import { GiHamburgerMenu } from "react-icons/gi";
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
+  // Toggle the navbar state when clicking on burger menu icon
   const BurgerMenuHandler = () => setIsOpen(!isOpen);
 
-  // const renderIcon = isOpen ? (
-  //   <IoClose className={`${styles.headerIcon} ${styles.burger_closeIcon}`} />
-  // ) : (
-  //   <GiHamburgerMenu className={styles.headerIcon} />
-  // );
 
   return (
     <header className={styles.header}>

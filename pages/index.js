@@ -1,6 +1,4 @@
 import styles from "../styles/Home.module.css";
-import Image from "next/image";
-import HeroImage from "../public/images/HeroImage.jpg";
 
 export default function Home() {
   return (
