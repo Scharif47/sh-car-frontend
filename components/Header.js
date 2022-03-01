@@ -7,7 +7,6 @@ import { BsPersonFill } from "react-icons/bs";
 import { AiFillStar } from "react-icons/ai";
 import { GiHamburgerMenu } from "react-icons/gi";
 
-
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -23,7 +22,9 @@ function Header() {
     <header className={styles.header}>
       <div className={`${styles.header__left} ${styles.header__content}`}>
         <div className={styles.burger_menu} onClick={BurgerMenuHandler}>
-        <GiHamburgerMenu className={`${styles.headerIcon} ${styles.burger_headerIcon}`} />
+          <GiHamburgerMenu
+            className={`${styles.headerIcon} ${styles.burger_headerIcon}`}
+          />
         </div>
         <Link href="/">
           <a>
@@ -51,7 +52,7 @@ function Header() {
         </Link>
       </div>
 
-      <Navbar isOpen={isOpen} />
+      <Navbar setIsOpen={setIsOpen} isOpen={isOpen} />
     </header>
   );
 }

@@ -1,18 +1,19 @@
-import React from "react";
+import React, { useRef } from "react";
 import Link from "next/link";
 import { IoClose } from "react-icons/io5";
 import styles from "../styles/Navbar.module.css";
 
-function Navbar({ isOpen }) {
+function Navbar({ setIsOpen, isOpen }) {
   return (
     <nav
       className={`bg-gradient-to-b from-indigo-200 to-gray-200 ${styles.nav} ${
         isOpen && styles.active
       }`}
     >
-      <div className={styles.burger_div}>
-        <IoClose className={styles.burger_closeIcon} />
-      </div>
+      <IoClose
+        onClick={() => setIsOpen(false)}
+        className={styles.nav__closeIcon}
+      />
 
       <ul className={styles.nav__content}>
         <Link href="/">
