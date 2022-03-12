@@ -45,6 +45,7 @@ function Footer() {
     return windowSize;
   }
 
+  
   const screenSize = useWindowSize();
   const currentYear = new Date().getFullYear();
   const isSmallScreen = screenSize.width < 1024;

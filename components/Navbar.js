@@ -4,16 +4,18 @@ import { IoClose } from "react-icons/io5";
 import styles from "../styles/Navbar.module.css";
 
 function Navbar({ setIsOpen, isOpen }) {
-
-  
   function useClickHandler(ref) {
     useEffect(() => {
-      
       /**
        * Alert if clicked on outside of element
        */
       function handleClickOutside(event) {
-        if (ref.current && !ref.current.contains(event.target) && event.target.tagName !== "path" && event.target.tagName !== "svg") {
+        if (
+          ref.current &&
+          !ref.current.contains(event.target) &&
+          event.target.tagName !== "path" &&
+          event.target.tagName !== "svg"
+        ) {
           setIsOpen(false);
         }
       }
